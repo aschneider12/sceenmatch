@@ -23,7 +23,7 @@ public class Principal {
     List<Serie> allSeries;
     private SerieRepository repository;
 
-    public void Principal(){
+    public Principal(){
         API_KEY += System.getenv("OMBD_API_KEY");
     }
 
@@ -75,6 +75,7 @@ public class Principal {
     private void buscarTopCinco() {
         List<Serie> sa = repository.findTop5ByOrderByAvaliacaoDesc();
         sa.forEach(serie -> System.out.println(serie.getTitulo() + ", "+serie.getAvaliacao()));
+        exibeMenu(repository);
     }
 
     private void buscarSeriePorAtor() {
