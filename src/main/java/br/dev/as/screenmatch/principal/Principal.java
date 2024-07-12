@@ -14,21 +14,13 @@ import java.util.stream.Collectors;
 
 public class Principal {
 
-    private Scanner leitura = new Scanner(System.in);
-    private ConsumoApi consumo = new ConsumoApi();
-    private ConverteDados conversor = new ConverteDados();
     private final String ENDERECO = "https://www.omdbapi.com/?t=";
-    private String API_KEY = "&apikey=";
-    
-    List<Serie> allSeries;
-    private SerieRepository repository;
 
     public void Principal(){
         API_KEY += System.getenv("OMBD_API_KEY");
     }
 
-    public void exibeMenu(SerieRepository serieRepository) {
-        this.repository = serieRepository;
+        API_KEY += System.getenv("OMBD_API_KEY");
 
         System.getenv("OMBD_API_KEY");
 
