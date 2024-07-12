@@ -16,14 +16,13 @@ import java.util.stream.Collectors;
 
 public class Principal {
 
-    private final String API_KEY = "&apiKey=6585022c";
-    private final String API_URL = "https://www.omdbapi.com/?t=";
+    private final String ENDERECO = "https://www.omdbapi.com/?t=";
 
     private ConsumoAPI consumoAPI = new ConsumoAPI();
     private ConverteDados converteDados = new ConverteDados();
     private Scanner leitor = new Scanner(System.in);
 
-    public void exibeMenu() {
+        API_KEY += System.getenv("OMBD_API_KEY");
 
         System.out.println("Digite nome da série:");
         var nomeSerie = leitor.nextLine();
